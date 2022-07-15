@@ -12,7 +12,8 @@ import {
   Archivo_600SemiBold
 } from '@expo-google-fonts/archivo'
 
-import { SchedulingComplete } from './src/screens/SchedulingComplete';
+import { Routes } from './src/routes';
+
 import theme from './src/styles/theme';
 
 const App = function() {
@@ -30,7 +31,7 @@ const App = function() {
 
   return (
     <ThemeProvider theme={theme}>
-      <SchedulingComplete />
+      <Routes />
     </ThemeProvider>
   );
 };
