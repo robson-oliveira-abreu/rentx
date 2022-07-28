@@ -50,10 +50,15 @@ export function SchedulingDetails() {
     function handleConfirmRental() {
         navigation.navigate('SchedulingComplete')
     }
+
+    function handleBack() {
+        navigation.goBack()
+    }
+    
     return (
         <Container>
             <Header>
-                <BackButton onPress={() => { console.log('hello') }} />
+                <BackButton onPress={handleBack} />
 
             </Header>
 
