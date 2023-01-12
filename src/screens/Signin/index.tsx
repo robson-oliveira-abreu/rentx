@@ -11,6 +11,7 @@ import { useNavigation } from '@react-navigation/native';
 import * as Yup from 'yup';
 
 import theme from '../../styles/theme';
+import { useAuth } from '../../hooks/Auth';
 
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
@@ -29,6 +30,7 @@ export function SignIn() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigation = useNavigation();
+    const { signIn } = useAuth();
 
     const handleSignIn = async () => {
         try {
@@ -43,8 +45,8 @@ export function SignIn() {
             await schema.validate({ email, password })
             Alert.alert('Tudo certo!')
 
-            // fazer login 
-            
+            signIn({ email, password })
+
         } catch (error) {
             if (error instanceof Yup.ValidationError) {
                 return Alert.alert('Opa', error.message)
@@ -56,7 +58,7 @@ export function SignIn() {
         }
     }
 
-    const handleNewAccount = ()=> {
+    const handleNewAccount = () => {
         navigation.navigate('SignUpFirstStep')
     }
 

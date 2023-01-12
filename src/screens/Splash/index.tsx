@@ -54,7 +54,7 @@ export const Splash: React.FC = () => {
   })
 
   function startApp() {
-    navigation.navigate('Home')
+    navigation.navigate('SignIn')
   }
 
   useEffect(() => {

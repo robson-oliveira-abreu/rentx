@@ -98,7 +98,7 @@ export function CarDetails() {
                 ]}
             >
                 <Header>
-                    <BackButton onPress={handleBack} />
+                    <BackButton style={{zIndex: 9}} onPress={handleBack} />
                 </Header>
 
                 <Animated.View style={sliderCarsStyleAnimation}>
@@ -126,8 +126,8 @@ export function CarDetails() {
                         <Name>{car.name}</Name>
                     </Description>
                     <Rent>
-                        <Period>{car.rent.period}</Period>
-                        <Price>R$ {car.rent.price}</Price>
+                        <Period>{car.period}</Period>
+                        <Price>R$ {car.price}</Price>
                     </Rent>
                 </Details>
 
