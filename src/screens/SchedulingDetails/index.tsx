@@ -15,7 +15,7 @@ import { Button } from "../../components/Button";
 import { getAccessoryIcon } from "../../utils/getAccessoryIcon";
 import { format } from "date-fns";
 import { getPlatformDate } from "../../utils/getPlatformDate";
-import api from "../../services/api";
+import { api } from "../../services/api";
 
 import {
     Container,

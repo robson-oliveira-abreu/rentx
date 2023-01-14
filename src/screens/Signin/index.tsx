@@ -62,7 +62,6 @@ export function SignIn() {
         navigation.navigate('SignUpFirstStep')
     }
 
-
     return (
         <KeyboardAvoidingView
             behavior='position'

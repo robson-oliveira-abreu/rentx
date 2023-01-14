@@ -18,7 +18,7 @@ import {
   Form,
   FormTitle,
 } from './styles';
-import api from '../../../services/api';
+import { api } from '../../../services/api';
 
 export interface SignUpParamns {
   user: {
@@ -64,7 +64,7 @@ export function SignUpSecondStep() {
           message: `Agora é só fazer o login \n e aproveitar.`
         })
       })
-      .catch(()=> {
+      .catch(() => {
         Alert.alert('Opa', 'Não foi possível cadastrar.')
       });
   }

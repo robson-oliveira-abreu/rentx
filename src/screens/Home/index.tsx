@@ -16,7 +16,7 @@ import Animated, {
 const ButtonAnimated = Animated.createAnimatedComponent(RectButton)
 
 import Logo from '../../assets/logo.svg'
-import api from '../../services/api'
+import { api } from '../../services/api'
 import { CarDTO } from '../../dtos/CarDTO'
 
 import { Car } from '../../components/Car'
