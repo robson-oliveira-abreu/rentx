@@ -2,8 +2,8 @@ import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import { AppStackRoutes } from "./app.stack.routes";
-import { Home } from "../screens/Home";
 import { MyCars } from "../screens/MyCars";
+import { Profile } from "../screens/Profile";
 
 import HomeSvg from '../assets/home.svg'
 import CarSvg from '../assets/car.svg'
@@ -51,7 +51,7 @@ export function AppTabRoutes() {
             />
             <Screen
                 name='Profile'
-                component={Home}
+                component={Profile}
                 options={{
                     tabBarIcon: ({ color }) => (
                         <PeopleSvg width={24} height={24} color={color} />
